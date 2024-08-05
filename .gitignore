@@ -1,0 +1,11 @@
+# Local .tfvars files
+*.auto.tfvars
+*.tfvars
+*.tfvars.json
+
+# Terraform State Files
+*.tfstate
+*.tfstate.*
+
+#todo
+todo

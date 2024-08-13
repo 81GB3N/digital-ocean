@@ -1,12 +1,11 @@
-vpc
-firewall
-automated pods
-naujas clusteris terraform
-git init
-nodejs image <---
-
-grazint apranga
-self driving
+.gitignore not working
 
 DONE:
+automated pods
+naujas clusteris terraform
 secret not working
+git init
+vpc
+firewall
+loadbalancer reanme
+health check

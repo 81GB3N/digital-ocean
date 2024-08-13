@@ -2,6 +2,7 @@
 *.auto.tfvars
 *.tfvars
 *.tfvars.json
+.terraform/*
 
 # Terraform State Files
 *.tfstate
@@ -9,3 +10,7 @@
 
 #todo
 todo
+
+#
+node_modules
+.env

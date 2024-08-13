@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test website</title>
+</head>
+
+<body>
+    <h1>Test page</h1>
+</body>
+<button onclick="getResponse()">get response</button>
+<div class="response-div">response: <span class="response"></span></div>
+
+<script>
+    async function getResponse() {
+        const isLocalhost = window.location.hostname === 'localhost';
+        // const apiBaseUrl = 'http://backend-service.default.svc.cluster.local:5000'
+
+        const apiBaseUrl = isLocalhost
+            ? 'http://localhost:5000'  // Local development
+            : '/api';  // Kubernetes
+
+        const response = await fetch(apiBaseUrl);
+        const response_span = document.querySelector(".response");
+        const server = await response.json();
+        response_span.innerHTML = server.num
+    }
+</script>
+
+</html>
